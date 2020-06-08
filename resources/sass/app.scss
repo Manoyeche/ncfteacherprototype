@@ -9,3 +9,13 @@
 
 // Sweet alert 2
 @import "~sweetalert2/src/sweetalert2.scss";
+
+@import "./fonts.scss";
+
+body {
+    font-family: HelveticaNeueLight;
+}
+
+.btn, .dropdown-menu, .card {
+    border-radius: 0;
+}

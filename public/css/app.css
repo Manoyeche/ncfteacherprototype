@@ -11356,3 +11356,23 @@ body.swal2-toast-column .swal2-toast .swal2-input {
 body.swal2-toast-column .swal2-toast .swal2-validation-message {
   font-size: 1em;
 }
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/Helvetica/HelveticaNeue.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeueLight";
+  src: url("../fonts/Helvetica/HelveticaNeue-Light.ttf");
+}
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("../fonts/Helvetica/Helvetica-Neu-Bold.ttf");
+}
+body {
+  font-family: HelveticaNeueLight;
+}
+
+.btn, .dropdown-menu, .card {
+  border-radius: 0;
+}
