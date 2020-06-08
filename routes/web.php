@@ -27,6 +27,13 @@ Route::prefix('/admin')->group(function () {
 
 Route::prefix('/teacher')->group(function () {
     Route::get('/', 'Teacher\TeacherController@index')->name('teacher');
+    
+    Route::prefix('/student')->group(function () {
+        Route::get('/', 'Teacher\StudentController@list')->name('teacher.student.list');
+        Route::get('/{id}', 'Teacher\StudentController@viewStudent')->name('teacher.student.view');
+
+        Route::post('/add-student', 'Teacher\StudentController@addStudent')->name('teacher.student.add');
+    });
 });
 
 Route::prefix('/student')->group(function () {

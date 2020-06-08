@@ -13,7 +13,13 @@
             @endif
 
             You are logged in! {{ auth()->user()->profile->fullname }}
+            <br><br>
+            
+            <a href="{{ route('teacher.student.list') }}" class="btn btn-dark">Student List</a>
+            <button class="btn btn-dark">Grades</button>
+            <button class="btn btn-dark">Attendance</button>
         </div>
     </div>
+
 </div>
 @endsection
