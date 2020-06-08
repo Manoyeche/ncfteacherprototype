@@ -20,3 +20,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('/admin')->group(function () {
+    Route::get('/', 'Admin\AdminController@index')->name('admin');
+});
+
+Route::prefix('/teacher')->group(function () {
+    Route::get('/', 'Teacher\TeacherController@index')->name('teacher');
+});
+
+Route::prefix('/student')->group(function () {
+    Route::get('/', 'Student\StudentController@index')->name('student');
+});
