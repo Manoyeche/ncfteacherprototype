@@ -26,7 +26,9 @@ class StudentController extends Controller
     public function viewStudent($id) {
         $user = User::where('user_type', 2)->findOrFail($id);
 
-        return $user;
+        return view('teacher.student.view')->with([
+            'data' => $user
+        ]);
     }
 
     public function addStudent(Request $request) {
