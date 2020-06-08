@@ -48,4 +48,13 @@ class User extends Authenticatable
     public function isStudent() {
         return $this->user_type == 2;
     }
+
+
+
+    // ///////////////////
+    // RELATIONS
+
+    public function profile() {
+        return $this->hasOne('App\UserProfile');
+    }
 }
