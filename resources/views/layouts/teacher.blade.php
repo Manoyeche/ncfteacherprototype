@@ -23,7 +23,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm border-bottom">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }} Instructor
@@ -79,10 +79,12 @@
 
         <br>
         <div class="container">
-            <a href="{{ route('teacher') }}" class="btn btn-dark">Dashboard</a>
-            <a href="{{ route('teacher.student.list') }}" class="btn btn-dark">Student List</a>
-            <button class="btn btn-dark">Grades</button>
-            <button class="btn btn-dark">Attendance</button>
+            <a href="{{ route('teacher') }}" class="btn btn-dark mb-1">Dashboard</a>
+            <a href="{{ route('teacher.student.list') }}" class="btn btn-dark mb-1">Student List</a>
+            <button class="btn btn-dark mb-1">Classes</button>
+            <button class="btn btn-dark mb-1">Section</button>
+            <button class="btn btn-dark mb-1">Grades</button>
+            <button class="btn btn-dark mb-1">Attendance</button>
         </div>
         <main class="py-4">
             @yield('content')

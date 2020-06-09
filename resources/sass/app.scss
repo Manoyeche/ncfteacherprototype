@@ -13,7 +13,8 @@
 @import "./fonts.scss";
 
 body {
-    font-family: HelveticaNeueLight;
+    font-family: GoogleSans,sans-serif; 
+    background-color: white;
 }
 
 .btn, .dropdown-menu, .card {
