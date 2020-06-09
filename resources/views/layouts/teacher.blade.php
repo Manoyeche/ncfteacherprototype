@@ -23,7 +23,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm border-bottom">
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }} Instructor
@@ -83,6 +83,7 @@
             <a href="{{ route('teacher.student.list') }}" class="btn btn-dark mb-1">Student List</a>
             <button class="btn btn-dark mb-1">Classes</button>
             <button class="btn btn-dark mb-1">Sections</button>
+            <button class="btn btn-dark mb-1">Subjects</button>
             <button class="btn btn-dark mb-1">Grades</button>
             <button class="btn btn-dark mb-1">Attendance</button>
         </div>
