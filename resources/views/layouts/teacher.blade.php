@@ -10,9 +10,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -83,7 +80,7 @@
             <a href="{{ route('teacher.student.list') }}" class="btn btn-dark mb-1">Student List</a>
             <button class="btn btn-dark mb-1">Classes</button>
             <button class="btn btn-dark mb-1">Sections</button>
-            <button class="btn btn-dark mb-1">Subjects</button>
+            <a href="{{ route('teacher.subject.list') }}" class="btn btn-dark mb-1">Subjects</a>
             <button class="btn btn-dark mb-1">Grades</button>
             <button class="btn btn-dark mb-1">Attendance</button>
         </div>
@@ -93,6 +90,10 @@
     </div>
 
 
+
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}"></script>
+    
     @stack('scripts')
 </body>
 

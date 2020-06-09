@@ -34,6 +34,12 @@ Route::prefix('/teacher')->group(function () {
 
         Route::post('/add-student', 'Teacher\StudentController@addStudent')->name('teacher.student.add');
     });
+
+    Route::prefix('/subject')->group(function () {
+        Route::get('/', 'Teacher\SubjectController@list')->name('teacher.subject.list');
+
+        Route::post('/add-subject', 'Teacher\SubjectController@addSubject')->name('teacher.subject.add');
+    });
 });
 
 Route::prefix('/student')->group(function () {
