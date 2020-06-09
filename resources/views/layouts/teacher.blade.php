@@ -82,7 +82,7 @@
             <a href="{{ route('teacher') }}" class="btn btn-dark mb-1">Dashboard</a>
             <a href="{{ route('teacher.student.list') }}" class="btn btn-dark mb-1">Student List</a>
             <button class="btn btn-dark mb-1">Classes</button>
-            <button class="btn btn-dark mb-1">Section</button>
+            <button class="btn btn-dark mb-1">Sections</button>
             <button class="btn btn-dark mb-1">Grades</button>
             <button class="btn btn-dark mb-1">Attendance</button>
         </div>

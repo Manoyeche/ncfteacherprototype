@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header d-flex flex-wrap align-items-center">
-            <div class="mr-auto">
+            <div class="mr-auto h4 mb-0">
                 Student List
             </div>
             <div>
