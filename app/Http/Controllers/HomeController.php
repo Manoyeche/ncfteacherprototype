@@ -33,6 +33,6 @@ class HomeController extends Controller
             return redirect()->route('student');
         }
 
-        return abort(500);
+        abort(500);
     }
 }
