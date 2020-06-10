@@ -30,11 +30,11 @@
                                 {{ $item->name }}
                             </div>
                             <div>
-                                <button type="button" class="btn btn-dark btn-sm" data-toggle="modal">View</button>
+                                <a href="{{ route('teacher.section.view', $item->id) }}" class="btn btn-dark btn-sm" >View</a>
                             </div>
                         </div>
                         <div class="card-body">
-                            <h4>Students: 0</h4>
+                            <h4>Students: {{ $item->students()->count() }}</h4>
                             <h4>Desc: {{ $item->desc }}</h4>
                         </div>
                     </div>

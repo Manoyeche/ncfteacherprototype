@@ -52676,6 +52676,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 window.swal = __webpack_require__(/*! sweetalert2/dist/sweetalert2.js */ "./node_modules/sweetalert2/dist/sweetalert2.js");
 
 __webpack_require__(/*! ./common */ "./resources/js/common.js");
+
+__webpack_require__(/*! ./teacher/section */ "./resources/js/teacher/section.js");
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -52798,6 +52800,31 @@ $('body').on('click', '.j-form-swal-delete-confirmation', function (e) {
     }
   });
 });
+
+/***/ }),
+
+/***/ "./resources/js/teacher/section.js":
+/*!*****************************************!*\
+  !*** ./resources/js/teacher/section.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if (document.querySelector("#teacherSection")) {
+  new Vue({
+    el: '#teacherSection',
+    data: {
+      students: [],
+      search_student: ''
+    },
+    mounted: function mounted() {},
+    methods: {
+      getStudents: function getStudents() {},
+      searchStudent: function searchStudent() {},
+      addStudent: function addStudent(student) {}
+    }
+  });
+}
 
 /***/ }),
 

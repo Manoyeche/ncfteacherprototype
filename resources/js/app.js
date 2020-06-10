@@ -11,6 +11,8 @@ window.swal = require('sweetalert2/dist/sweetalert2.js');
 
 require('./common');
 
+require('./teacher/section');
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

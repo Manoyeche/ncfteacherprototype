@@ -22,6 +22,17 @@ class SectionController extends Controller
         ]);
     }
 
+    public function view($id) {
+        $section = Section::findOrFail($id);
+
+        $students = $section->students()->get();
+
+        return view('teacher.section.view')->with([
+            'section' => $section,
+            'students' => $students
+        ]);
+    }
+
     public function addSection(Request $request) {
         $validatedData = $request->validate([
             'name' => 'required|unique:sections',

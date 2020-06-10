@@ -10,4 +10,8 @@ class Section extends Model
     use SoftDeletes;
     
     protected $guarded = [];
+
+    public function students() {
+        return $this->hasMany('App\SectionStudent');
+    }
 }

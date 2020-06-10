@@ -11381,6 +11381,10 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
   font-family: "GoogleSansBold";
   src: url("../fonts/GoogleSans/GoogleSans-Bold.ttf");
 }
+[v-cloak] > * {
+  display: none;
+}
+
 body {
   font-family: GoogleSans, sans-serif;
   background-color: white;

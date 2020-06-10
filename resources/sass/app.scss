@@ -12,6 +12,9 @@
 
 @import "./fonts.scss";
 
+
+[v-cloak] > * { display:none }
+
 body {
     font-family: GoogleSans,sans-serif; 
     background-color: white;
