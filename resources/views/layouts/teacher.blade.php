@@ -79,7 +79,7 @@
             <a href="{{ route('teacher') }}" class="btn btn-dark mb-1">Dashboard</a>
             <a href="{{ route('teacher.student.list') }}" class="btn btn-dark mb-1">Student List</a>
             <a href="{{ route('teacher.class.list') }}" class="btn btn-dark mb-1">Classes</a>
-            <button class="btn btn-dark mb-1">Sections</button>
+            <a href="{{ route('teacher.section.list') }}" class="btn btn-dark mb-1">Sections</a>
             <a href="{{ route('teacher.subject.list') }}" class="btn btn-dark mb-1">Subjects</a>
             <button class="btn btn-dark mb-1">Grades</button>
             <button class="btn btn-dark mb-1">Attendance</button>

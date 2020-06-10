@@ -30,7 +30,7 @@ class ClassController extends Controller
 
     public function addClass(Request $request) {
         $validatedData = $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:teacher_classes',
             'subject_id' => 'required|exists:subjects,id',
             'section_id' => 'required|exists:sections,id',
         ]);
