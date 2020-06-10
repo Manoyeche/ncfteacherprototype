@@ -67,28 +67,27 @@
             <p v-if="student.datas.length == 0">No record found.</p>
         </div>
     </div>
-
-</div>
-
     
-<div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addStudentModalLabel">ADD STUDENT</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ route('teacher.student.add') }}" method="POST">
-                    @csrf      
-                    <br>
-                    <button type="submit" class="btn btn-success j-form-swal-confirmation" data-confirm-text="Add Student?">Add Student</button>
-                </form>
+    <div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addStudentModalLabel">ADD STUDENT</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('teacher.student.add') }}" method="POST">
+                        @csrf      
+                        <br>
+                        <button type="submit" class="btn btn-success j-form-swal-confirmation" data-confirm-text="Add Student?">Add Student</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
 </div>
 
 @endsection
