@@ -40,6 +40,12 @@ Route::prefix('/teacher')->group(function () {
 
         Route::post('/add-subject', 'Teacher\SubjectController@addSubject')->name('teacher.subject.add');
     });
+
+    Route::prefix('/Class')->group(function () {
+        Route::get('/', 'Teacher\ClassController@list')->name('teacher.class.list');
+
+        Route::post('/add-class', 'Teacher\ClassController@addClass')->name('teacher.class.add');
+    });
 });
 
 Route::prefix('/student')->group(function () {
