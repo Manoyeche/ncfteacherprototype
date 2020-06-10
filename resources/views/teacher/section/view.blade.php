@@ -3,6 +3,7 @@
 @section('content')
 <div class="container" id="teacherSection" v-cloak>
     <input type="hidden" value="{{ $section->id }}" ref="section_id">
+    
     <div class="card mb-3">
         <div class="card-header d-flex flex-wrap align-items-center">
             <div class="mr-auto h4 mb-0">
