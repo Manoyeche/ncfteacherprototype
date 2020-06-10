@@ -52814,12 +52814,27 @@ if (document.querySelector("#teacherSection")) {
   new Vue({
     el: '#teacherSection',
     data: {
-      students: [],
-      search_student: ''
+      student: {
+        params: {
+          section_id: 0
+        },
+        datas: []
+      }
     },
-    mounted: function mounted() {},
+    mounted: function mounted() {
+      this.student.params.section_id = this.$refs.section_id.value;
+      this.getStudents();
+    },
     methods: {
-      getStudents: function getStudents() {},
+      getStudents: function getStudents() {
+        var _this = this;
+
+        axios.post("/teacher/section/get-students", this.student.params).then(function (res) {
+          if (res.data.status == 1) {
+            _this.student.datas = res.data.datas;
+          }
+        }).then(function () {});
+      },
       searchStudent: function searchStudent() {},
       addStudent: function addStudent(student) {}
     }

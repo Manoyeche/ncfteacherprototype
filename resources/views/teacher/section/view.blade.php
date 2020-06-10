@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container" id="teacherSection" v-cloak>
+    <input type="hidden" value="{{ $section->id }}" ref="section_id">
     <div class="card mb-3">
         <div class="card-header d-flex flex-wrap align-items-center">
             <div class="mr-auto h4 mb-0">
@@ -40,35 +41,30 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($students as $item)
-                            <tr>
-                                <th scope="row">{{ (($students->total() - $students->firstItem()) - $loop->index) + 1 }}.</th>
-                                <td>
-                                    {{ $item->user->studentProfile->student_no }}
-                                </td>
-                                <td>
-                                    {{ $item->user->profile->fullname }}
-                                </td>
-                                <td>
-                                    {{ $item->user->studentProfile->course }}
-                                </td>
-                                <td>
-                                    {{ $item->user->studentProfile->year }}
-                                </td>
-                                <td>
-                                    <a href="{{ route('teacher.student.view', $item->user->id) }}">
-                                        <button type="button" class="btn btn-dark btn-sm">View</button>
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
+                        <tr v-for="(item, index) in student.datas">
+                            <th scope="row">@{{ index + 1 }}.</th>
+                            <td>
+                                @{{ item.user.student_profile.student_no }}
+                            </td>
+                            <td>
+                                @{{ item.user.profile.fullname }}
+                            </td>
+                            <td>
+                                @{{ item.user.student_profile.course }}
+                            </td>
+                            <td>
+                                @{{ item.user.student_profile.year }}
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <button type="button" class="btn btn-dark btn-sm">View</button>
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-            {{-- {{ $students->appends(request()->except('page'))->links() }} --}}
-            @if (count($students) == 0)
-                <p>No record found.</p>
-            @endif
+            <p v-if="student.datas.length == 0">No record found.</p>
         </div>
     </div>
 

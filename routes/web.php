@@ -52,6 +52,8 @@ Route::prefix('/teacher')->group(function () {
         Route::get('/{id}', 'Teacher\SectionController@view')->name('teacher.section.view');
 
         Route::post('/add-section', 'Teacher\SectionController@addSection')->name('teacher.section.add');
+        
+        Route::post('/get-students', 'Teacher\SectionStudentController@getStudents');
     });
 });
 
